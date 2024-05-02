@@ -1,12 +1,18 @@
 {
-  "name": "ngx-auth-firebaseui",
-  "description": "Open Source Library for Angular Web Apps to integrate a material user interface for firebase authentication",
-  "version": "7.1.0",
+  "name": "ngx-auth-firebaseui-updated",
+  "description": "From ngx-auth-firbaseui but updated to fix dependency issues with Angular 16. Open Source Library for Angular Web Apps to integrate a material user interface for firebase authentication",
+  "version": "7.1.2",
   "homepage": "https://ngx-auth-firebaseui.firebaseapp.com",
   "author": {
     "name": "anthonynahas",
     "url": "https://github.com/anthonynahas"
   },
+  "contributors": [
+    {
+      "name": "Kalani Bright",
+      "url": "https://github.com/kalani96746"
+    }
+  ]
   "repository": {
     "type": "git",
     "url": "git://github.com/anthonynahas/ngx-auth-firebaseui.git"
@@ -50,17 +56,17 @@
     "test:watch": "../../node_modules/.bin/jest --coverage --watch"
   },
   "peerDependencies": {
-    "@angular/common": "^15.x",
-    "@angular/core": "^15.x",
-    "@angular-material-extensions/password-strength": "^12.x",
-    "@angular/animations": "^15.x",
-    "@angular/cdk": "^15.0.0",
-    "@angular/fire": "^7.x",
+    "@angular/common": "^16.2.12",
+    "@angular/core": "^16.2.12",
+    "@angular-material-extensions/password-strength": "^16.0.0",
+    "@angular/animations": "^16.2.12",
+    "@angular/cdk": "^^16.2.11",
+    "@angular/fire": "^7.6.1",
     "@angular/flex-layout": "^15.0.0-beta.42",
-    "@angular/forms": "^15.x",
-    "@angular/material": "^15.0.0",
-    "@angular/router": "^15.x",
-    "firebase": "^9.x"
+    "@angular/forms": "^16.2.12",
+    "@angular/material": "^16.2.11",
+    "@angular/router": "^16.2.12",
+    "firebase": "^9.23.0"
   },
   "engines": {
     "node": ">=14"

@@ -7,3 +7,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .ngx-auth-firebaseui-avatar-menu {
     margin-top: 5px;
 }
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

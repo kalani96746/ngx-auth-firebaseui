@@ -1,7 +1,7 @@
 import {Tree} from '@angular-devkit/schematics';
 import {
   findBootstrapModuleCall as originalFindBootstrapModuleCall,
-  findBootstrapModulePath as originalFindBootstrapModulePath,
+  getAppModulePath as originalFindBootstrapModulePath,
   getAppModulePath as originalGetAppModulePath
 } from '@schematics/angular/utility/ng-ast-utils';
 import * as ts from '@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript';

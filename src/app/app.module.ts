@@ -4,7 +4,6 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import {Angulartics2Module} from 'angulartics2';
 import {AngularFireModule} from '@angular/fire/compat';
@@ -20,6 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {NgxAuthFirebaseUIModule} from 'projects/ngx-auth-firebaseui/src/public-api';
 import {environment} from '../environments/environment';
+import {LayoutModule} from "@angular/cdk/layout";
 
 
 export const firebaseKey = environment.config;
@@ -50,6 +50,7 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     AppRoutingModule,
     BrowserAnimationsModule,
+    LayoutModule,
     Angulartics2Module.forRoot(),
     AngularFireModule.initializeApp(firebaseKey),
     NgxAuthFirebaseUIModule.forRoot(firebaseKey, firebaseAppNameFactory,
@@ -73,7 +74,6 @@ export function createTranslateLoader(http: HttpClient) {
     MarkdownModule.forRoot({loader: HttpClient}),
     HttpClientModule,
     FormsModule,
-    FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
     MatTabsModule,
