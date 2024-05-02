@@ -3,7 +3,8 @@
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-auth-firebaseui@master/demo/src/assets/logo.svg">
 </p>
 
-# ngx-auth-firebaseui - Open Source Library for Angular Web Apps to integrate a material user interface for firebase authentication.
+# ngx-auth-firebaseui-updated - Open Source Library for Angular Web Apps to integrate a material user interface for firebase authentication.
+
 
 [![npm version](https://badge.fury.io/js/ngx-auth-firebaseui.svg)](https://badge.fury.io/js/ngx-auth-firebaseui)
 [![demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://ngx-auth-firebaseui.firebaseapp.com)
@@ -28,6 +29,8 @@
   <img alt="ngx-auth-firebaseui-logo.png" width="256px" style="text-align: center;"
   src="ngx-auth-firebaseui-logo.png">
 </p>
+
+This was a minimally updated project updated by kalani96746 to remove and update dependencies that were out of date and no longer compatible with Angular 16.  While the library (/projects subfolder) now works fine the demo app in the main folder has numerous issues and does not run.  Still it should suit most folks needs.  The rest that follows is the original README from the author.
 
 Angular UI component for [firebase](https://firebase.google.com/docs/auth/web/firebaseui) authentication.
 This library is an angular module (including angular components and services) that allows to authenticate

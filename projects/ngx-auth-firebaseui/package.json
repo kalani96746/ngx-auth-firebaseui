@@ -12,10 +12,10 @@
       "name": "Kalani Bright",
       "url": "https://github.com/kalani96746"
     }
-  ]
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/anthonynahas/ngx-auth-firebaseui.git"
+    "url": "https://github.com/kalani96746/ngx-auth-firebaseui"
   },
   "license": "MIT",
   "schematics": "./schematics/collection.json",
