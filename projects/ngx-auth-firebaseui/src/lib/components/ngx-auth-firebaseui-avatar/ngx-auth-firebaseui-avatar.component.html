@@ -10,20 +10,20 @@
 </button>
 
 <mat-menu #posXMenu="matMenu" class="before ngx-auth-firebaseui-avatar-menu" xPosition="before" >
-  <div fxLayout="row" fxLayout.xs="column" style="padding-left: 10px; padding-right: 10px" [ngStyle]="{ 'padding-top.px': layout === 'default' ? 0 : 10 }">
+  <div style="flex-direction: row" fxLayout.xs="column" style="padding-left: 10px; padding-right: 10px" [ngStyle]="{ 'padding-top.px': layout === 'default' ? 0 : 10 }">
     <button [style.background-image]="user?.photoURL ? 'url(' + user?.photoURL + ')' : ''"
             mat-fab
             style="background-size: cover"
             *ngIf="layout === 'default'">
       <span *ngIf="!user?.photoURL">{{displayNameInitials || ''}}</span>
     </button>
-    <div fxLayout="column" style="padding-left: 10px; padding-right: 10px">
+    <div style="flex-direction: column" style="padding-left: 10px; padding-right: 10px">
       <strong mat-card-title>{{user?.displayName}}</strong>
       <em mat-card-subtitle style="font-style: italic">{{user?.email}}</em>
     </div>
   </div>
 
-  <div fxFlex="100" fxLayout="column" [ngStyle]="{ 'padding-bottom.px': layout === 'default' ? 0 : 10 } ">
+  <div fxFlex="100" style="flex-direction: column" [ngStyle]="{ 'padding-bottom.px': layout === 'default' ? 0 : 10 } ">
     <div *ngFor="let menuItem of links" class="links-menu">
       <button (click)="menuItem?.callback()" mat-menu-item>
         <mat-icon>{{menuItem?.icon}}</mat-icon>

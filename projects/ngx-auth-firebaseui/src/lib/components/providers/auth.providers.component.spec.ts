@@ -3,17 +3,20 @@ import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
 
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {MatButtonModule, MatIconModule, MatSnackBarModule} from '@angular/material';
-import {AuthProvidersComponent, Layout} from './auth.providers.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {AuthProvidersComponent} from './auth.providers.component';
+import {Layout} from '../../interfaces';
 import {AuthProcessService, AuthProvider} from '../../services/auth-process.service';
 import {FirestoreSyncService} from '../../services/firestore-sync.service';
 import {AngularFireModule} from '@angular/fire/compat';
 import {BehaviorSubject} from 'rxjs';
 import {AngularFirestore} from '@angular/fire/compat/firestore';
 import {AngularFireAuth} from '@angular/fire/compat/auth';
-import {NgxAuthFirebaseUIConfigToken} from '../../ngx-auth-firebase-u-i.module';
+//import {NgxAuthFirebaseUIConfigToken} from '../../ngx-auth-firebaseui.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {NgxAuthFirebaseUIConfigToken} from "../../tokens";
 
 describe('AuthProvidersComponent', function() {
   let de: DebugElement;
@@ -81,7 +84,6 @@ describe('AuthProvidersComponent', function() {
       imports: [
         NoopAnimationsModule,
         HttpClientTestingModule,
-        FlexLayoutModule,
         MatButtonModule,
         MatIconModule,
         MatSnackBarModule

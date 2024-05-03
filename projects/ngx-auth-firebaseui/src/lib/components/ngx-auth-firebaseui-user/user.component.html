@@ -6,7 +6,7 @@
   <mat-card *ngIf="auth.user | async as user">
     <!--<form [formGroup]="updateFormGroup" >-->
     <!--card header-->
-    <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-header style="flex-direction: column" fxLayoutAlign="center center">
 
       <img *ngIf="authProcess?.getUserPhotoUrl() | async as photoUrl" [src]="photoUrl" mat-card-avatar>
 
@@ -35,7 +35,7 @@
     <ng-template #edit>
       <form (submit)="save()" [formGroup]="updateFormGroup">
 
-        <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <mat-card-content style="flex-direction: column" fxLayoutAlign="center center">
           <div fxLayoutAlign="center">
             <button (click)="changeEditMode()" class="edit-button" color="warn"
                     mat-raised-button>
@@ -90,7 +90,7 @@
 
         </mat-card-content>
 
-        <mat-card-actions fxLayout="column">
+        <mat-card-actions style="flex-direction: column">
           <button color="primary"
                   mat-button
                   type="submit">
@@ -137,7 +137,7 @@
         <mat-icon color="primary" matSuffix>phone</mat-icon>
       </mat-form-field>
 
-      <mat-card-actions fxLayout="column">
+      <mat-card-actions style="flex-direction: column">
         <button (click)="signOut()" *ngIf="canLogout" color="primary" mat-button>{{signoutButtonText}}</button>
         <button (click)="deleteAccount()" *ngIf="canDeleteAccount" color="warn" mat-button>{{deleteAccountButtonText}}</button>
       </mat-card-actions>
@@ -150,8 +150,8 @@
 
 
 <ng-template #none>
-  <mat-card class="none-card" fxLayout="row" fxLayoutAlign="center center">
-    <mat-card-content fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="none-card" style="flex-direction: row" fxLayoutAlign="center center">
+    <mat-card-content style="flex-direction: row" fxLayoutAlign="center center">
       <mat-icon color="accent">warning</mat-icon>
       <span>{{notLoggedInText}}</span>
     </mat-card-content>

@@ -1,9 +1,10 @@
-import {Component, Input, Output} from '@angular/core';
+import {Component, Input, Output, Renderer2} from '@angular/core';
 import {AuthProcessService, AuthProvider} from '../../services/auth-process.service';
 import {NgxAuthFirebaseuiAnimations} from '../../animations';
 import {Layout, LegalityDialogParams, LegalityDialogResult, Theme} from '../../interfaces';
 import {MatDialog,MatDialogRef} from '@angular/material/dialog';
 import {LegalityDialogComponent} from '../legality-dialog/legality-dialog.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'ngx-auth-firebaseui-providers',
@@ -27,11 +28,20 @@ export class AuthProvidersComponent {
   themes = Theme;
   authProvider = AuthProvider;
 
-  constructor(public authProcess: AuthProcessService, public dialog: MatDialog) {
+  isXsScreen: boolean;
+
+  constructor(public authProcess: AuthProcessService, public dialog: MatDialog,
+      private renderer: Renderer2,
+      private breakpointObserver: BreakpointObserver) {
     this.onSuccess = authProcess.onSuccessEmitter;
     this.onError = authProcess.onErrorEmitter;
   }
-
+  ngOnInit() {
+    this.breakpointObserver.observe([Breakpoints.XSmall])
+      .subscribe(result => {
+        this.isXsScreen = result.matches;
+      });
+  }
   processLegalSignUP(authProvider?: AuthProvider) {
     if (this.tosUrl || this.privacyPolicyUrl) {
       const params: LegalityDialogParams = {

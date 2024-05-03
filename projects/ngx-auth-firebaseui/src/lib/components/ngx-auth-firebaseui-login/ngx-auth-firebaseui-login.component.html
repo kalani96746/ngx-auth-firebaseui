@@ -1,6 +1,6 @@
-<div fxLayout="column" id="login">
+<div style="flex-direction: column" id="login">
 
-  <div fxLayout="column" fxLayoutAlign="center center" id="login-form-wrapper">
+  <div style="flex-direction: column" fxLayoutAlign="center center" id="login-form-wrapper">
 
     <div [@animateStagger]="{ value: '50' }" id="login-form">
 
@@ -35,7 +35,7 @@
         </mat-form-field>
 
         <div [@animate]="{ value: '*', params: { x: '50px' } }"
-             class="remember-forgot-password" fxLayout="row"
+             class="remember-forgot-password" style="flex-direction: row"
              fxLayout.xs="column"
              fxLayoutAlign="space-between center">
           <!--          <mat-checkbox class="remember-me" aria-label="Remember Me">-->
@@ -79,7 +79,7 @@
       <div *ngIf="registrationEnabled"
            [@animateStagger]="{ value: '100' }"
            class="register"
-           fxLayout="column" fxLayoutAlign="center center">
+           style="flex-direction: column" fxLayoutAlign="center center">
         <span [@animate]="{ value: '*', params: { x: '100px' } }" class="text">
           {{dontHaveAnAccountText}}
         </span>

@@ -181,7 +181,6 @@ by starring :star: and sharing it :loudspeaker:
 - [angular forms - v8.x](https://www.npmjs.com/package/@angular/forms)
 - [angular animations - v8.x](https://www.npmjs.com/package/@angular/animations)
 - [angular router - v8.x](https://www.npmjs.com/package/@angular/router)
-- [angular flex-layout v8.0.0-beta.26](https://www.npmjs.com/package/@angular/flex-layout)
 - [@angular/fire - v5.2.x](https://www.npmjs.com/package/@angular/fire)
 - [firebase - v6.x](https://www.npmjs.com/package/firebase)
 

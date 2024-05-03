@@ -1,12 +1,11 @@
 // TODO: can't fix some parts of this so comment it out for the moment
-
+/*
 // import 'core-js/es7/reflect'; // needed for unit testing
 // import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 // import {CUSTOM_ELEMENTS_SCHEMA, DebugElement, SimpleChange} from '@angular/core';
 
 // import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 // import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-// import {FlexLayoutModule} from '@angular/flex-layout';
 // import {HttpClientTestingModule} from '@angular/common/http/testing';
 // import {AngularFireModule} from '@angular/fire/compat';
 // import {AngularFirestore} from '@angular/fire/compat/firestore';
@@ -138,4 +137,4 @@
 //     expect(component.authProcess.messageOnAuthError).toBeDefined();
 //     expect(component.authProcess.messageOnAuthError).toEqual(component.messageOnAuthError);
 //   });
-// });
+// });*/

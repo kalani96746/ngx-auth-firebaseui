@@ -4,9 +4,13 @@ import {By} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, DebugElement} from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
-import {FlexLayoutModule} from '@angular/flex-layout';
 
-import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatIconModule, MatInputModule, MatSnackBarModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFirestore} from '@angular/fire/compat/firestore';
@@ -38,7 +42,6 @@ describe('NgxAuthFirebaseuiLoginComponent', () => {
         NoopAnimationsModule,
         HttpClientTestingModule,
         ReactiveFormsModule,
-        FlexLayoutModule,
         MatDialogModule,
         MatIconModule,
         MatInputModule,

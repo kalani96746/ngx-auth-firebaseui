@@ -5,16 +5,16 @@
              let-verifyEmailConfirmationText="verifyEmailConfirmationText" let-verifyEmailGoBackText="verifyEmailGoBackText"
              let-verifyEmailTitleText="verifyEmailTitleText">
   <mat-card class="verify-email">
-    <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-content style="flex-direction: column" fxLayoutAlign="center center">
       <mat-icon>email</mat-icon>
-      <p class="title" fxLayout="column" fxLayoutAlign="center center">
+      <p class="title" style="flex-direction: column" fxLayoutAlign="center center">
         <span class="mat-subheading-2">{{ verifyEmailTitleText }}</span>
         <span class="mat-body-2">{{ email }}</span>
       </p>
       <p class="subtitle">{{ verifyEmailConfirmationText }}</p>
       <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
     </mat-card-content>
-    <mat-card-actions fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-actions style="flex-direction: column" fxLayoutAlign="center center">
       <button (click)="continue()" *ngIf="goBackURL" class="go-back-button action-button" mat-stroked-button>
         {{ verifyEmailGoBackText }}
       </button>

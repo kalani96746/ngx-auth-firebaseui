@@ -4,7 +4,6 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-import {FlexLayoutModule} from '@angular/flex-layout';
 // @angular/fire
 import {FIREBASE_APP_NAME, FIREBASE_OPTIONS} from '@angular/fire/compat';
 import {FirebaseOptions} from '@firebase/app-types';
@@ -78,7 +77,6 @@ export {FirestoreSyncService} from './services/firestore-sync.service';
     RouterModule,
     HttpClientModule,
     // FLEX_LAYOUT
-    FlexLayoutModule,
     // FORMS
     FormsModule,
     ReactiveFormsModule,

@@ -2,13 +2,11 @@
 
   <!--default icon buttons-->
   <div *ngSwitchDefault
-       [fxLayoutAlign]="layout == 'row' ? 'space-around center' : 'stretch'"
-       [fxLayout]="layout"
-       fxLayout.xs="column">
+       [ngStyle]="{'flex-direction': isXsScreen ? 'column' : layout, 'justify-content': layout == 'row' ? 'space-around center' : 'stretch'}">
     <button (click)="processLegalSignUP(authProvider.Google)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Google)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             mat-button>
       <mat-icon svgIcon="google-colored"></mat-icon>
       Google
@@ -17,7 +15,7 @@
     <button (click)="processLegalSignUP(authProvider.Apple)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Apple)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="apple-filled"
             mat-button>
       <mat-icon svgIcon="apple"></mat-icon>
@@ -27,7 +25,7 @@
     <button (click)="processLegalSignUP(authProvider.Facebook)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Facebook)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="facebook-filled"
             mat-button>
       <mat-icon svgIcon="facebook"></mat-icon>
@@ -36,7 +34,7 @@
     <button (click)="processLegalSignUP(authProvider.Twitter)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Twitter)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="twitter-filled"
             mat-button>
       <mat-icon svgIcon="twitter"></mat-icon>
@@ -45,7 +43,7 @@
     <button (click)="processLegalSignUP(authProvider.Github)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Github)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             mat-button>
       <mat-icon svgIcon="github"></mat-icon>
       GitHub
@@ -53,7 +51,7 @@
     <button (click)="processLegalSignUP(authProvider.Microsoft)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Microsoft)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             mat-button>
       <mat-icon svgIcon="microsoft"></mat-icon>
       Microsoft
@@ -61,7 +59,7 @@
     <button (click)="processLegalSignUP(authProvider.Yahoo)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Yahoo)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             mat-button>
       <mat-icon svgIcon="yahoo"></mat-icon>
       Yahoo
@@ -70,14 +68,12 @@
 
   <!--classic-->
   <div *ngSwitchCase="themes.CLASSIC"
-       [fxLayoutAlign]="layout == 'row' ? 'space-around center' : 'stretch'"
-       [fxLayout]="layout"
-       class="buttons-classic"
-       fxLayout.xs="column">
+       [ngStyle]="{'flex-direction': isXsScreen ? 'column' : layout, 'justify-content': layout == 'row'? 'space-around center' : 'stretch'}"
+       class="buttons-classic">
     <button (click)="processLegalSignUP(authProvider.Google)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Google)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="google-classic"
             mat-button>
       Google
@@ -85,7 +81,7 @@
     <button (click)="processLegalSignUP(authProvider.Apple)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Apple)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="apple-classic"
             mat-button>
       Apple
@@ -93,7 +89,7 @@
     <button (click)="processLegalSignUP(authProvider.Facebook)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Facebook)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="facebook-classic"
             mat-button>
       Facebook
@@ -101,7 +97,7 @@
     <button (click)="processLegalSignUP(authProvider.Twitter)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Twitter)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="twitter-classic"
             mat-button>
       Twitter
@@ -109,7 +105,7 @@
     <button (click)="processLegalSignUP(authProvider.Github)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Github)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="github-classic"
             mat-button>
       GitHub
@@ -117,7 +113,7 @@
     <button (click)="processLegalSignUP(authProvider.Microsoft)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Microsoft)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="microsoft-classic"
             mat-button>
       Microsoft
@@ -125,7 +121,7 @@
     <button (click)="processLegalSignUP(authProvider.Yahoo)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Yahoo)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="yahoo-classic"
             mat-button>
       Yahoo
@@ -134,14 +130,13 @@
 
   <!--stroked-->
   <div *ngSwitchCase="themes.STROKED"
-       [fxLayoutAlign]="layout == 'row' ? 'space-around center' : 'stretch'"
-       [fxLayout]="layout"
-       class="buttons-classic"
-       fxLayout.xs="column">
+
+       [ngStyle]="{'flex-direction': isXsScreen ? 'column' : layout, 'justify-content': layout == 'row' ? 'space-around center' : 'stretch'}"
+       class="buttons-classic">
     <button (click)="processLegalSignUP(authProvider.Google)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Google)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':true}"
             class="google-classic"
             mat-stroked-button>
       Google
@@ -149,7 +144,7 @@
     <button (click)="processLegalSignUP(authProvider.Apple)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Apple)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="apple-classic"
             mat-stroked-button>
       Apple
@@ -157,7 +152,7 @@
     <button (click)="processLegalSignUP(authProvider.Facebook)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Facebook)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="facebook-classic"
             mat-stroked-button>
       Facebook
@@ -165,7 +160,7 @@
     <button (click)="processLegalSignUP(authProvider.Twitter)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Twitter)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="twitter-classic"
             mat-stroked-button>
       Twitter
@@ -173,7 +168,7 @@
     <button (click)="processLegalSignUP(authProvider.Github)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Github)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="github-classic"
             mat-stroked-button>
       GitHub
@@ -181,7 +176,7 @@
     <button (click)="processLegalSignUP(authProvider.Microsoft)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Microsoft)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="microsoft-classic"
             mat-stroked-button>
       Microsoft
@@ -189,7 +184,7 @@
     <button (click)="processLegalSignUP(authProvider.Yahoo)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Yahoo)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="yahoo-classic"
             mat-stroked-button>
       Yahoo
@@ -198,14 +193,12 @@
 
   <!--raised-->
   <div *ngSwitchCase="themes.RAISED"
-       [fxLayoutAlign]="layout == 'row' ? 'space-around center' : 'stretch'"
-       [fxLayout]="layout"
-       class="buttons-raised"
-       fxLayout.xs="column">
+       [ngStyle]="{'flex-direction': isXsScreen ? 'column' : layout, 'justify-content': layout == 'row' ? 'space-around center' : 'stretch'}"
+       class="buttons-raised">
     <button (click)="processLegalSignUP(authProvider.Google)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Google)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="google-raised"
             mat-raised-button>
       Google
@@ -213,7 +206,7 @@
     <button (click)="processLegalSignUP(authProvider.Apple)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Apple)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="apple-raised"
             mat-raised-button>
       Apple
@@ -221,7 +214,7 @@
     <button (click)="processLegalSignUP(authProvider.Facebook)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Facebook)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="facebook-raised"
             mat-raised-button>
       Facebook
@@ -229,7 +222,7 @@
     <button (click)="processLegalSignUP(authProvider.Twitter)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Twitter)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="twitter-raised"
             mat-raised-button>
       Twitter
@@ -237,7 +230,7 @@
     <button (click)="processLegalSignUP(authProvider.Github)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Github)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="github-raised"
             mat-raised-button>
       GitHub
@@ -245,7 +238,7 @@
     <button (click)="processLegalSignUP(authProvider.Microsoft)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Microsoft)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="microsoft-raised"
             mat-raised-button>
       Microsoft
@@ -253,7 +246,7 @@
     <button (click)="processLegalSignUP(authProvider.Yahoo)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Yahoo)"
             [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}"
-            [ngClass.xs]="{'space-full-xs':true}"
+            [ngClass]="{'space-full-xs':isXsScreen}"
             class="yahoo-raised"
             mat-raised-button>
       Yahoo
@@ -262,8 +255,7 @@
 
   <!--fab-->
   <div *ngSwitchCase="themes.FAB"
-       [fxLayoutAlign]="layout == 'row' ? 'space-around center' : 'stretch'"
-       [fxLayout]="layout"
+       [ngStyle]="{'flex-direction': layout, 'justify-content': layout == 'row' ? 'space-around center' : 'stretch'}"
        class="buttons-raised">
     <button (click)="processLegalSignUP(authProvider.Google)"
             *ngIf="providers === authProvider.ALL || providers.includes(authProvider.Google)"
@@ -318,8 +310,7 @@
 
   <!--mini-fab-->
   <div *ngSwitchCase="themes.MINI_FAB"
-       [fxLayoutAlign]="layout == 'row' ? 'space-around center' : 'stretch'"
-       [fxLayout]="layout"
+       [ngStyle]="{'flex-direction': layout, 'justify-content': layout == 'row' ? 'space-around center' : 'stretch'}"
        class="buttons-raised"
        fxLayoutAlign.xs="center center">
     <button (click)="processLegalSignUP(authProvider.Google)"
