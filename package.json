@@ -5,14 +5,13 @@
     "ng": "ng",
     "start": "ng serve --port 4971",
     "build": "ng build",
-    "build:client-and-server-bundles:ghpages": "npm run build:prod:ghpages && ng run ngx-auth-firebaseui-demo:server:production --bundleDependencies all",
+
     "build:docs": "npx compodoc -p projects/ngx-auth-firebaseui/tsconfig.lib.json --hideGenerator --disableCoverage -d dist/browser/doc/",
-    "build:lib": "ng build ngx-auth-firebaseui",
-    "build:lib:Watch": "ng build ngx-auth-firebaseui --watch",
+    "build:lib": "ng build ngx-auth-firebaseui-updated",
+    "build:lib:Watch": "ng build ngx-auth-firebase-updated --watch",
     "build:prod": "ng build --configuration production",
     "build:prerender": "npm run build:client-and-server-bundles && npm run compile:server && npm run generate:prerender",
-    "build:prerender:ghpages": "npm run build:client-and-server-bundles:ghpages && npm run compile:server && npm run generate:prerender",
-    "deploy:ghpages": "ng deploy --base-href=/ngx-auth-firebaseui-demo/ --no-build",
+
     "generate:prerender": "cd dist && node prerender",
     "test": "jest",
     "lint": "ng lint",
@@ -21,25 +20,18 @@
     "release": "release-it",
     "test:watch": "jest --watch",
     "compile:server_bak": "webpack --config webpack.server.config.js --progress --colors",
-    "build:ssr_bak": "npm run build:client-and-server-bundles && npm run compile:server",
-    "serve:ssr_bak": "node dist/server",
-    "build:client-and-server-bundles_bak": "ng build --configuration production && ng run ngx-auth-firebaseui-demo:server:production --bundleDependencies all",
-    "dev:ssr": "ng run ngx-auth-firebaseui-demo:serve-ssr",
-    "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build --configuration production && ng run ngx-auth-firebaseui-demo:server:production",
-    "prerender": "ng run ngx-auth-firebaseui-demo:prerender"
+    "serve:ssr": "node dist/server/main.js"
   },
   "private": true,
   "dependencies": {
     "@angular-eslint/schematics": "^16.2.0",
     "@angular-material-extensions/password-strength": "^16.0.0",
     "@angular/animations": "^16.2.12",
-    "@angular/cdk": "^16.2.11",
+    "@angular/cdk": "^16.2.12",
     "@angular/common": "^16.2.12",
     "@angular/compiler": "^16.2.12",
     "@angular/core": "^16.2.12",
     "@angular/fire": "^7.6.1",
-    "@angular/flex-layout": "^14.0.0-beta.41",
     "@angular/forms": "^16.2.12",
     "@angular/material": "^16.2.11",
     "@angular/platform-browser": "^16.2.12",
@@ -86,6 +78,6 @@
     "protractor": "~7.0.0",
     "release-it": "^16.2.1",
     "ts-node": "~8.3.0",
-    "typescript": "~5.1.6"
+    "typescript": "~4.9.4"
   }
 }
